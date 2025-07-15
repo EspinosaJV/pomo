@@ -1,0 +1,20 @@
+{
+  "name": "pomo",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [],
+  "author": "John Vincent Espinosa",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "micromodal": "^0.6.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10"
+  }
+}
