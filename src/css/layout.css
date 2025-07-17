@@ -1,0 +1,20 @@
+/*
+    ---FOUND HERE---
+    .div__row
+
+*/
+
+.div__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.div__column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}

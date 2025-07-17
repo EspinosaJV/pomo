@@ -1,1 +1,33 @@
-<h1>Hello World!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomo</title>
+    <link rel="icon" type="image/png" href="assets/POMOLOGO.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+</head>
+<body class="body">
+    <main class="main">
+        <div class="div__row">
+            <h1 class="h1 uppercase bold">pomo</h1>
+            <img class="img" src="assets/POMOLOGO.PNG" alt="Pomo Logo" width="200" height="200">
+        </div>
+        <div class="div__column">
+            <p id="currentDateDisplay" class="p uppercase nowrap"><!-- DYNAMICALLY FILLED CURRENT MONTH, DAY, AND YEAR --></p>
+            <p id="currentTimeDisplay" class="p uppercase nowrap"><!-- DYNAMICALLY FILLED CURRENT TIME --></p>
+        </div>
+        <div id="homeNavButtons" class="div__row">
+            <button class="button uppercase nowrap">pomodoro</button>
+            <button class="button uppercase nowrap">for today</button>
+            <button class="button uppercase nowrap">end of day</button>
+        </div>
+        <div id="quoteDisplayDiv" class="div__column">
+            <p id="currentQuoteDisplay" class="p uppercase">I think it will be found that experience, the true source and foundation of all knowledge, invariably confirms its truth.</p>
+            <p id="currentAuthorDisplay" class="p uppercase bold">Thomas Malthus</p>
+        </div>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@import url('./variables.css');
+@import url('./utilities.css');
+
+.h1 {
+    font-size: var(--FF-XL);
+    font-family: var(--HEADER-FONT);
+    color: var(--FONT-COLOR);
+}
+
+.p {
+    font-size: var(--FF-M);
+    font-family: var(--BODY-FONT);
+    font-weight: var(--THIN);
+    color: var(--FONT-COLOR);
+}
+
+.button {
+    border: 1px solid var(--BUTTON-BORDER-COLOR);
+    background-color: var(--BUTTON-BACKGROUND-COLOR);
+    font-size: var(--FF-M);
+    font-family: var(--BODY-FONT);
+    font-weight: var(--THIN);
+    padding: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color: var(--FONT-COLOR);
+}
+
+.button:active,
+.button:hover,
+.button:focus {
+    border: 1px solid var(--ACTIVE-BUTTON-BORDER-COLOR);
+    background-color: var(--ACTIVE-BUTTON-BACKGROUND-COLOR);
+    color: var(--ACTIVE-BUTTON-FONT-COLOR);
+}
+

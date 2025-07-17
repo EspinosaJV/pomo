@@ -1,0 +1,29 @@
+@import url('../variables.css'); 
+
+.body {
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+#homeNavButtons {
+    gap: 5vw;
+}
+
+#quoteDisplayDiv {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding-bottom: 10vh;
+}
+
+#currentQuoteDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#currentAuthorDisplay {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

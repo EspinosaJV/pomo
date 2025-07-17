@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* FONT SIZES */
+    --FF-XL: clamp(3rem, 30vw, 8vw);
+    --FF-L: clamp(2rem, 20vw, 5vw);
+    --FF-M: clamp(1rem, 10vw, 2.5vw);
+
+    /* FONT FAMILY */
+    --HEADER-FONT: 'Montserrat', sans-serif;
+    --BODY-FONT: 'Roboto', sans-serif;
+
+    /* FONT WEIGHTS */
+    --THIN: 100;
+
+    /* COLORS */
+    --BACKGROUND-COLOR: whitesmoke;
+    --BUTTON-BORDER-COLOR: #1B262C;
+    --BUTTON-BACKGROUND-COLOR: transparent;
+    --ACTIVE-BUTTON-BORDER-COLOR: #1B262C;
+    --ACTIVE-BUTTON-BACKGROUND-COLOR: #1B262C;
+    --ACTIVE-BUTTON-FONT-COLOR: #BBE1FA;
+    --FONT-COLOR: #1B262C;
+}

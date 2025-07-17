@@ -1,0 +1,6 @@
+@import url('./base.css');
+@import url('./variables.css'); /* -- ALL SORTS OF FUKIN VARIABLES HERE-- */
+@import url('./layout.css'); /* --ALL CONTAINER STYLINGS-- */
+@import url('./components.css');
+@import url('./utilities.css'); /* --ALL HELPER/MOBILE FUNCTIONS -- */
+@import url('./pages/home.css');
