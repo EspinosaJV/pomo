@@ -1,5 +1,5 @@
-import { renderCurrentDateDisplay,renderCurrentTimeDisplay, } from './ui.js';
-import { homeDashboardEventListeners } from './events.js';
+import { renderCurrentDateDisplay,renderCurrentTimeDisplay, } from '../ui.js';
+import { homeDashboardEventListeners } from '../events.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     // PUT ALL IMPORTED SHIT HERE

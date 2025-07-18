@@ -21,9 +21,14 @@
 
 /* BOTH PORTRAIT & LANDSCAPE STYLING */
 @media (max-width: 768px) {
-    .img {
+    #homeDashboardPomoLogo {
         height: 100px;
         width: 100px;
+    }
+
+    #pomodoroDashboardPomoLogo {
+        height: 30px;
+        width: 30px;
     }
 
     #homeNavButtons {

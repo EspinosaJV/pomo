@@ -3,9 +3,11 @@
 
 :root {
     /* FONT SIZES */
-    --FF-XL: clamp(3rem, 30vw, 8vw);
-    --FF-L: clamp(2rem, 20vw, 5vw);
-    --FF-M: clamp(1rem, 10vw, 2.5vw);
+    --FF-XL: clamp(7vw, 10rem, 8vw);
+    --FF-L: clamp(5vw, 7rem, 6vw);
+    --FF-M: clamp(3vw, 2rem, 4vw);
+    --FF-S: clamp(2vw, 1rem, 3vw);
+    --FF-XS: clamp(1vw, 0.5rem, 2vw);
 
     /* FONT FAMILY */
     --HEADER-FONT: 'Montserrat', sans-serif;
