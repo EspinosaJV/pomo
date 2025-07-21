@@ -40,6 +40,7 @@
         <div id="pomodoroSessionModalBtnSection" class="div__row">
             <button id="pomodoroSessionModalBtn" class="button uppercase nowrap">pomodoro</button>
         </div>
+
         <!-- TIMER CONFIGURATION MICRO MODAL -->
         <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
             <div class="modal__overlay" tabindex="-1" data-micromodal-close>
@@ -57,6 +58,29 @@
                 </div>
                 <div class="modal__footer">
                     <button id="pomodoroTimerModalContinueBtn" class="modal__btn modal__btn-primary">Continue</button>
+                    <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- POMODORO SESSION COUNT MICRO MODAL -->
+        <div class="modal mmicromodal-slide" id="modal-2" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+                <div class="modal__header">
+                    <h2 class="modal__title uppercase bold" id="modal-2-title">
+                        YOUR POMODORO SESSION COUNT
+                    </h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                </div>
+                <div class="modal__content" id="modal-2-content">
+                    <div class="modal__content__output div__column">
+                        <!-- DYNAMICALLY FILLED OUTPUT HERE-->
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button id="pomodoroSessionCountModalResetBtn" class="modal__btn modal__btn-primary">Reset</button>
                     <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
                 </div>
             </div>
