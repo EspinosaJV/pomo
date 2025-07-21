@@ -4,11 +4,13 @@ dayjs.extend(duration);
 
 import { pomodoroDashboardEventListeners } from '../events.js';
 import { setProgress, initializeTimerUI } from '../ui.js';
+import { getCurrentFormattedTime } from '../utils.js';
 import MicroModal from 'micromodal';
 import '../../css/micromodal.css';
 
 let activeCountdownInterval = null;
 let pomodoroSessionCount = 0;
+let pomodoroSessionCountDict = {};
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeTimerUI();
@@ -87,7 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.pomodoroTimerLog = function() {
         console.log("Now logging the current Pomodoro session!");
         pomodoroSessionCount++;
-        console.log("Here is the current Pomodoro Session count", pomodoroSessionCount);
+        let currentPomodoroSessionDictKey = `Pomodoro #${pomodoroSessionCount}`;
+        pomodoroSessionCountDict[currentPomodoroSessionDictKey] = getCurrentFormattedTime();
+        localStorage.setItem("pomodoros", JSON.stringify(pomodoroSessionCountDict));
+        console.log("Here is the current Pomodoro Session count", pomodoroSessionCountDict);
         pomodoroTimerToggleReset();
     }
 });
