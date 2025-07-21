@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pomodoroTimerModalContinueBtn = document.getElementById("pomodoroTimerModalContinueBtn");
     const pomodoroTimerPauseButton = document.getElementById("pomodoroTimerPauseButton");
     const pomodoroModalTimerInput = document.getElementById("timer-input");
+    const pomodoroSessionModalBtn = document.getElementById("pomodoroSessionModalBtn");
 
     let initialTimerValue = pomodoroTimerDisplay.textContent;
 
@@ -35,6 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     setProgress(1);
+
+    pomodoroSessionModalBtn.addEventListener("click", () => {
+        console.log("Pomodoro Session Modal Button has been clicked!");
+    })
 
     pomodoroTimerModalContinueBtn.addEventListener("click", () => {
         const newTimeValue = pomodoroModalTimerInput.value.trim();
