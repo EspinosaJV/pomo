@@ -109,6 +109,11 @@
         width: 15px;
         height: 15px;
     }
+
+    #pomodoroTimerLogButton {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 /* LANDSCAPE STYLING */
@@ -121,5 +126,10 @@
     #pomodoroTimerResetButton {
         width: 25px;
         height: 25px;
+    }
+
+    #pomodoroTimerLogButton {
+        width: 15px;
+        height: 15px;
     }
 }

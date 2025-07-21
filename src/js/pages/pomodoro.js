@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     setProgress(1);
-    
+
     pomodoroTimerModalContinueBtn.addEventListener("click", () => {
         const newTimeValue = pomodoroModalTimerInput.value.trim();
 
@@ -71,6 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setProgress(1); 
         pomodoroTimerPauseButton.src = 'src/assets/playbutton.png'; 
     };
+
+    window.pomodoroTimerLog = function() {
+        console.log("Now logging the current Pomodoro session!");
+        pomodoroTimerToggleReset();
+    }
 });
 
 function startCountdown() {
