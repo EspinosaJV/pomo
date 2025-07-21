@@ -89,8 +89,32 @@
     justify-content: center;
 }
 
+#pomodoroSessionModalBtnSection {
+    margin-top: 5vh;
+}
+
+#pomodoroSessionModalBtn {
+    font-size: var(--FF-XS);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
+    #pomodoroSessionModalBtnSection {
+        margin-top: 0;
+    }
+
+    #pomodoroSessionModalBtn {
+        font-size: var(--FF-S);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     #pomodoroTimerSection {
         margin-top: 0;
         gap: 0;
@@ -128,6 +152,14 @@
 
 /* LANDSCAPE STYLING */
 @media (max-width: 768px) and (orientation:landscape) {
+    #pomodoroSessionModalBtn {
+        font-size: var(--FF-S);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
     #pomodoroTimerPauseButton {
         width: 25px;
         height: 25px;
