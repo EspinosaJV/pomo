@@ -8,11 +8,13 @@ import MicroModal from 'micromodal';
 import '../../css/micromodal.css';
 
 let activeCountdownInterval = null;
-let pomodoroSessionCount = null;
+let pomodoroSessionCount = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeTimerUI();
     startCountdown();
+    pomodoroDashboardEventListeners();
+    setProgress(1);
 
     const pomodoroTimerDisplay = document.getElementById("pomodoroTimerDisplay");
     const pomodoroTimerModalContinueBtn = document.getElementById("pomodoroTimerModalContinueBtn");
@@ -22,23 +24,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let initialTimerValue = pomodoroTimerDisplay.textContent;
 
-    pomodoroDashboardEventListeners();
     MicroModal.init({
-        onShow: (modal) => {
-            console.log("Pomodoro Modal timer is now showing.");
-            const currentTime = pomodoroTimerDisplay.textContent;
-            pomodoroModalTimerInput.value = currentTime;
-            pomodoroModalTimerInput.select();
-        },
         onClose: (modal) => {
-            console.log("Modal is now closing.");
+            console.log(`Modal '${modal.id}' is now closing.`);
         },
+        debugMode: true
     });
 
-    setProgress(1);
+    pomodoroTimerDisplay.addEventListener("click", () => {
+        MicroModal.show('modal-1', {
+            onShow: (modal) => {
+                console.log("Showing modal-1: Adjust Timer MicroModal");
+                const currentTime = pomodoroTimerDisplay.textContent;
+                pomodoroModalTimerInput.value = currentTime;
+                pomodoroModalTimerInput.select();
+            }
+        });
+    });
 
     pomodoroSessionModalBtn.addEventListener("click", () => {
         console.log("Pomodoro Session Modal Button has been clicked!");
+        MicroModal.show('modal-2');
     })
 
     pomodoroTimerModalContinueBtn.addEventListener("click", () => {
@@ -52,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setProgress(1);
             pomodoroTimerPauseButton.src = 'src/assets/pausebutton.png';
             
-            MicroModal.close();
+            MicroModal.close('modal-1');
             startCountdown();
         } else {
             alert("Please enter a valid time format (e.g., 25:00)");
