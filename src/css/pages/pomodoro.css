@@ -1,9 +1,5 @@
 @import url('../variables.css'); 
 
-html {
-    min-height: 1080px;
-}
-
 #pomodoroDashboardHeader {
     width: 100%;
     display: flex;
@@ -35,6 +31,64 @@ html {
     border: none;
 }
 
+#pomodoroTimerSection {
+    margin-top: 20vh;
+    gap: 5vw;
+}
+
+#pomodoroTimerDisplay:hover {
+    cursor: pointer;
+}
+
+#pomodoroTimerPauseButton,
+#pomodoroTimerResetButton {
+    cursor: pointer;
+}
+
+.timer-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__background,
+.progress-ring__foreground {
+    fill: transparent;
+    stroke-width: 15px;
+}
+
+.progress-ring__background {
+    stroke: var(--TIMER-PROGRESS-RING-BACKGROUND-COLOR);
+}
+
+.progress-ring__foreground {
+    stroke: var(--TIMER-PROGRESS-RING-COLOR);
+    stroke-linecap: round;
+    stroke-dashoffset: var(--progress-offset, 0);
+    transition: stroke-dashoffset 0.2s linear;
+}
+
+#pomodoroTimerDisplay {
+    margin: 0;
+    padding: 0;
+    font-size: var(--FF-L);
+    font-family: var(--BODY-FONT);
+    color: var(--FONT-COLOR);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
     #pomodoroDashboardHomeButton,
@@ -46,4 +100,26 @@ html {
         padding-right: 1rem;
     }
 
+    #pomodoroTimerPauseButton {
+        width: 15px;
+        height: 15px;
+    }
+
+    #pomodoroTimerResetButton {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* LANDSCAPE STYLING */
+@media (max-width: 768px) and (orientation:landscape) {
+    #pomodoroTimerPauseButton {
+        width: 25px;
+        height: 25px;
+    }
+
+    #pomodoroTimerResetButton {
+        width: 25px;
+        height: 25px;
+    }
 }

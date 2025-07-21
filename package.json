@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "start": "live-server src"
+    "start": "live-server src",
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "John Vincent Espinosa",
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "live-server": "^1.2.2",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "vite": "^7.0.5"
   }
 }

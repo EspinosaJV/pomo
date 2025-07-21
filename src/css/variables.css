@@ -7,7 +7,7 @@
     --FF-L: clamp(5vw, 7rem, 6vw);
     --FF-M: clamp(3vw, 2rem, 4vw);
     --FF-S: clamp(2vw, 1rem, 3vw);
-    --FF-XS: clamp(1vw, 0.5rem, 2vw);
+    --FF-XS: clamp(1.25vw, 0.50rem, 2.25vw);
 
     /* FONT FAMILY */
     --HEADER-FONT: 'Montserrat', sans-serif;
@@ -18,10 +18,14 @@
 
     /* COLORS */
     --BACKGROUND-COLOR: whitesmoke;
+    --INPUT-FIELD-BORDER-COLOR: #1B262C;
+    --INPUT-FIELD-BACKGROUND-COLOR: transparent;
     --BUTTON-BORDER-COLOR: #1B262C;
     --BUTTON-BACKGROUND-COLOR: transparent;
     --ACTIVE-BUTTON-BORDER-COLOR: #1B262C;
     --ACTIVE-BUTTON-BACKGROUND-COLOR: #1B262C;
     --ACTIVE-BUTTON-FONT-COLOR: #BBE1FA;
     --FONT-COLOR: #1B262C;
+    --TIMER-PROGRESS-RING-COLOR: #1B262C;
+    --TIMER-PROGRESS-RING-BACKGROUND-COLOR: transparent;
 }

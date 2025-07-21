@@ -4,6 +4,22 @@
 
 */
 
+html {
+    min-height: 1080px;
+}
+
+header {
+    height: 10vh;
+}
+
+main {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .div__row {
     display: flex;
     align-items: center;

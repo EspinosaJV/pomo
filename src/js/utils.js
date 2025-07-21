@@ -1,6 +1,9 @@
-import dayjs from 'https://cdn.jsdelivr.net/npm/dayjs@1.11.13/+esm';
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
 import { QUOTES_API_KEY } from './apikey.js';
 const quote_api_url = 'https://api.api-ninjas.com/v1/quotes';
+
+dayjs.extend(duration)
 
 export function getCurrentFormattedDate() {
     return dayjs().format('MMMM D, YYYY');
