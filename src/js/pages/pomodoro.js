@@ -8,6 +8,7 @@ import MicroModal from 'micromodal';
 import '../../css/micromodal.css';
 
 let activeCountdownInterval = null;
+let pomodoroSessionCount = null;
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeTimerUI();
@@ -74,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.pomodoroTimerLog = function() {
         console.log("Now logging the current Pomodoro session!");
+        pomodoroSessionCount++;
+        console.log("Here is the current Pomodoro Session count", pomodoroSessionCount);
         pomodoroTimerToggleReset();
     }
 });
