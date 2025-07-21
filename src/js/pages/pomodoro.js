@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pomodoroTimerPauseButton = document.getElementById("pomodoroTimerPauseButton");
     const pomodoroModalTimerInput = document.getElementById("timer-input");
     const pomodoroSessionModalBtn = document.getElementById("pomodoroSessionModalBtn");
+    const pomodoroSessionCountMicroModalSessionDisplay = document.getElementById("pomodoroSessionCountMicroModalSessionDisplay");
 
     let initialTimerValue = pomodoroTimerDisplay.textContent;
 
@@ -46,6 +47,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pomodoroSessionModalBtn.addEventListener("click", () => {
         console.log("Pomodoro Session Modal Button has been clicked!");
+        pomodoroSessionCountMicroModalSessionDisplay.innerHTML = "";
+
+        const storedPomodoros = localStorage.getItem("pomodoros");
+        if (!storedPomodoros) {
+            const paragraphElement = document.createElement("p");
+            paragraphElement.classList.add("pomodoros-micromodal__p")
+            paragraphElement.textContent = "You have not logged any pomodoros yet, start logging them!";
+            pomodoroSessionCountMicroModalSessionDisplay.appendChild(paragraphElement);
+        }
+
         MicroModal.show('modal-2');
     })
 
