@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pomodoroModalTimerInput = document.getElementById("timer-input");
     const pomodoroSessionModalBtn = document.getElementById("pomodoroSessionModalBtn");
     const pomodoroSessionCountMicroModalSessionDisplay = document.getElementById("pomodoroSessionCountMicroModalSessionDisplay");
+    const pomodoroSessionCountModalResetBtn = document.getElementById("pomodoroSessionCountModalResetBtn");
 
     let initialTimerValue = pomodoroTimerDisplay.textContent;
 
@@ -33,6 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         debugMode: true
     });
+
+    pomodoroSessionCountModalResetBtn.addEventListener("click", () => {
+        pomodoroSessionCount = 0;
+        pomodoroSessionCountDict = {};
+        localStorage.setItem("pomodoros", JSON.stringify(pomodoroSessionCountDict));
+        pomodoroSessionCountMicroModalSessionDisplay.innerHTML = "";
+        console.log("Pomodoro sessions have been reset!");
+    })
 
     pomodoroTimerDisplay.addEventListener("click", () => {
         MicroModal.show('modal-1', {
