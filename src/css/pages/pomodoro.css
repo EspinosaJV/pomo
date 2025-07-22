@@ -106,6 +106,24 @@
     text-align: center;
 }
 
+.pomodoroSessionCountRow {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    margin-bottom: 1vh;
+    font-size: var(--FF-XS);
+    color: var(--FONT-COLOR);
+    font-family: var(--BODY-FONT);
+}
+
+.pomodoroSessionCountRowCount {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.pomodoroSessionCountRowTimestamp {
+    margin: 0;
+}
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
     #pomodoroSessionModalBtnSection {

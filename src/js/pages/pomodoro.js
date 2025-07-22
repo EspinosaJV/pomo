@@ -57,6 +57,31 @@ document.addEventListener("DOMContentLoaded", () => {
             pomodoroSessionCountMicroModalSessionDisplay.appendChild(paragraphElement);
         }
 
+        const parsedPomodoros = JSON.parse(storedPomodoros);
+        console.log("Here is the parsed Pomodoros", parsedPomodoros);
+
+        for(let pomodoroCount in parsedPomodoros) {
+            if (parsedPomodoros.hasOwnProperty(pomodoroCount)) {
+                const pomodoroTimeStamp = parsedPomodoros[pomodoroCount];
+
+                const contentRow = document.createElement("div");
+                contentRow.classList.add("pomodoroSessionCountRow");
+
+                const pomodoroCurrentCount = document.createElement("p");
+                pomodoroCurrentCount.textContent = pomodoroCount;
+                pomodoroCurrentCount.classList.add("pomodoroSessionCountRowCount");
+                pomodoroCurrentCount.classList.add("bold");
+                
+                const pomodoroCurrentTimeStamp = document.createElement("p");
+                pomodoroCurrentTimeStamp.textContent = pomodoroTimeStamp;
+                pomodoroCurrentTimeStamp.classList.add("pomodoroSessionCountRowTimestamp");
+
+                contentRow.appendChild(pomodoroCurrentCount);
+                contentRow.appendChild(pomodoroCurrentTimeStamp);
+                pomodoroSessionCountMicroModalSessionDisplay.appendChild(contentRow);
+            }
+        }
+
         MicroModal.show('modal-2');
     })
 
