@@ -1,5 +1,8 @@
 @import url('../variables.css'); 
 
+main {
+    padding: 0;
+}
 #pomodoroDashboardHeader {
     width: 100%;
     display: flex;
