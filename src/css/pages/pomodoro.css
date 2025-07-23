@@ -161,6 +161,11 @@ main {
         padding-right: 1rem;
     }
 
+    #pomodoroDashboardPomoLogo {
+        height: 30px;
+        width: 30px;
+    }
+
     #pomodoroTimerPauseButton {
         width: 15px;
         height: 15px;

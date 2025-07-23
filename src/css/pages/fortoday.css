@@ -30,3 +30,20 @@
     padding-right: 2rem;
     border: none;
 }
+
+/* PORTRAIT STYLING */
+@media (max-width: 768px) and (orientation:portrait) {
+    #forTodayDashboardHomeButton,
+    #forTodayDashboardPomodoroButton,
+    #forTodayDashboardEndOfDayButton {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #forTodayDashboardPomoLogo {
+        height: 30px;
+        width: 30px;
+    }
+}

@@ -26,11 +26,6 @@
         width: 100px;
     }
 
-    #pomodoroDashboardPomoLogo {
-        height: 30px;
-        width: 30px;
-    }
-
     #homeNavButtons {
         flex-direction: column;
     }
