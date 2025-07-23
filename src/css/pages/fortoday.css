@@ -67,6 +67,22 @@
     border: 1px solid var(--INPUT-FIELD-BORDER-COLOR);
 }
 
+#forTodayDashboardContainerContent {
+    width: 75%;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+#forTodayDashboardContainerContentDate {
+    width: 100%;
+}
+
+#forTodayDashboardContainerContentDate {
+    font-size: var(--FF-S);
+    color: var(--FONT-COLOR);
+    font-family: var(--BODY-FONT);
+}
+
 
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
