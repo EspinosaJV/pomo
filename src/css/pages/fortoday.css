@@ -20,6 +20,14 @@
     color: var(--FONT-COLOR);
 }
 
+#forTodayDashboardContainerHeader {
+    padding-top: 5vh;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
 #forTodayDashboardHomeButton,
 #forTodayDashboardPomodoroButton,
 #forTodayDashboardEndOfDayButton {
@@ -31,8 +39,26 @@
     border: none;
 }
 
+#forTodayDashboardContainerHeaderText {
+    font-size: var(--FF-S);
+    color: var(--FONT-COLOR);
+    font-family: var(--BODY-FONT);
+}
+
+#forTodayDashboardNewJournalBtn {
+    font-size: var(--FF-XS);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
+    #forTodayDashboardContainerHeader{
+        padding-top: 2.5vh;
+    }
+    
     #forTodayDashboardHomeButton,
     #forTodayDashboardPomodoroButton,
     #forTodayDashboardEndOfDayButton {
@@ -45,5 +71,24 @@
     #forTodayDashboardPomoLogo {
         height: 30px;
         width: 30px;
+    }
+
+    #forTodayDashboardNewJournalBtn {
+        font-size: var(--FF-S);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* LANDSCAPE STYLING */
+@media (max-width: 768px) and (orientation:landscape) {
+    #forTodayDashboardNewJournalBtn {
+        font-size: var(--FF-S);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
