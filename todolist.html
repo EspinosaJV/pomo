@@ -27,6 +27,27 @@
             <h2 id="forTodayDashboardContainerHeaderText" class="main__div__h2 uppercase nowrap bold" >for today</h2>
             <button id="forTodayDashboardNewJournalBtn" class="button uppercase nowrap">journal</button>
         </div>
+
+        <!-- JOURNAL MICRO MODAL-->
+        <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div id="journalMicroModalContainer" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+                    <div class="modal__header">
+                        <h2 class="modal__title uppercase bold" id="modal-3-title">
+                            Your Daily Journal
+                        </h2>
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </div>
+                    <div id="journalMicroModalContent" class="modal__content" id="modal-3-content">
+                        <textarea id="journalTextArea" name="journal" rows="5" columns="30" placeholder="What are your plans for today?"></textarea>
+                    </div>
+                    <div class="modal__footer">
+                        <button id="journalModalSubmitBtn" class="modal__btn modal__btn-primary">Submit</button>
+                        <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script type="module" src="src/js/pages/fortoday.js"></script>
 </body>

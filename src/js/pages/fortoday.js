@@ -1,7 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const forTodayDashboardNewJournalBtn = document.getElementById("forTodayDashboardNewJournalBtn");
+import MicroModal from 'micromodal';
+import '../../css/micromodal.css';
+import { forTodayDashboardEventListeners } from '../events.js';
 
-    forTodayDashboardNewJournalBtn.addEventListener("click", (event) => {
-        console.log("New Journal Button has been clicked!");
-    })
+document.addEventListener("DOMContentLoaded", () => {
+    forTodayDashboardEventListeners();
+    
+    MicroModal.init({
+        onClose: (modal) => {
+            console.log("Journal Modal is now closing");
+        },
+        debugMode: true
+    });
 })

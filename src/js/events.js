@@ -1,3 +1,6 @@
+import MicroModal from 'micromodal';
+import '../css/micromodal.css';
+
 export function homeDashboardEventListeners() {
     // BUTTONS 
     const pomodoroNavButton = document.getElementById("pomodoroNavButton");
@@ -34,4 +37,16 @@ export function pomodoroDashboardEventListeners() {
         console.log("Going to end of day page now!");
         window.location.href = "endofday.html";
     })
+}
+
+export function forTodayDashboardEventListeners() {
+    const forTodayDashboardNewJournalBtn = document.getElementById("forTodayDashboardNewJournalBtn");
+
+    forTodayDashboardNewJournalBtn.addEventListener("click", (event) => {
+        MicroModal.show('modal-3', {
+            onShow: (modal) => {
+                console.log("Modal 3 is now going to be showed");
+            }
+        });
+    });
 }

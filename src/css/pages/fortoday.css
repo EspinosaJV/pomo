@@ -53,6 +53,21 @@
     padding-right: 2rem;
 }
 
+#journalMicroModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#journalTextArea {
+    width: 300px;
+    height: 300px;
+    padding: 0.5rem;
+    border: 1px solid var(--INPUT-FIELD-BORDER-COLOR);
+}
+
+
 /* PORTRAIT STYLING */
 @media (max-width: 768px) and (orientation:portrait) {
     #forTodayDashboardContainerHeader{
@@ -80,6 +95,11 @@
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    #journalTextArea {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 /* LANDSCAPE STYLING */
@@ -90,5 +110,10 @@
         padding-bottom: 0.75rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    #journalTextArea {
+        width: 200px;
+        height: 100px;
     }
 }

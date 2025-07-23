@@ -60,6 +60,7 @@
   line-height: 1.5;
   color: var(--FONT-COLOR);
   font-size: var(--FF-XS);
+  font-family: var(--BODY-FONT);
 }
 
 .modal__footer {
@@ -133,6 +134,10 @@
   border: none;
   font-size: var(--FF-S);
 }
+
+#journalMicroModalContainer {
+  width: 1000px;
+}
 /**************************\
   Demo Animation Style
 \**************************/
@@ -183,4 +188,18 @@
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+/* PORTRAIT STYLING */
+@media (max-width: 768px) and (orientation:portrait) {
+  #journalMicroModalContainer {
+    width: 300px;
+  }
+}
+
+/* LANDSCAPE STYLING */
+@media (max-width: 768px) and (orientation:landscape) {
+  #journalMicroModalContainer {
+    width: 400px;
+  }
 }
