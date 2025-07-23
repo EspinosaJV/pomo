@@ -34,3 +34,8 @@
     color: var(--ACTIVE-BUTTON-FONT-COLOR);
 }
 
+.line-break {
+    background-color: #1B262C;
+    width: 75%;
+    height: 0.25vh;
+}
