@@ -1,0 +1,32 @@
+@import url('../variables.css');
+
+#forTodayDashboardHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+#pomoHeaderText {
+    margin: 0;
+    font-family: var(--HEADER-FONT);
+    font-size: var(--FF-M);
+    color: var(--FONT-COLOR);
+}
+
+#forTodayDashboardHomeButton,
+#forTodayDashboardPomodoroButton,
+#forTodayDashboardEndOfDayButton {
+    font-size: var(--FF-S);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+}
