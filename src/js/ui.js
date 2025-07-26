@@ -5,6 +5,7 @@ const currentDateDisplay = document.getElementById("currentDateDisplay");
 const currentTimeDisplay = document.getElementById("currentTimeDisplay");
 const currentQuoteDisplay = document.getElementById("currentQuoteDisplay");
 const currentAuthorDisplay = document.getElementById("currentAuthorDisplay");
+const forTodayDashboardContainerContentDate = document.getElementById("forTodayDashboardContainerContentDate");
 let progressCircle = null;
 let circumference = 0;
 
@@ -53,6 +54,11 @@ export function renderCurrentTimeDisplay() {
     }
 }
 
+export function forTodayDashboardRenderCurrentDateDisplay() {
+    if (forTodayDashboardContainerContentDate) {
+        forTodayDashboardContainerContentDate.innerHTML = getCurrentFormattedDate();
+    }
+}
 //TODO: uncomment this shit out for prod cuz dont wanna waste api tokens
 // quote display egh
 // export async function renderCurrentQuoteDisplay() {
