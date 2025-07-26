@@ -40,6 +40,8 @@ export function setProgress(percent) {
 export function renderCurrentDateDisplay() {
     if (currentDateDisplay) {
         currentDateDisplay.innerHTML = getCurrentFormattedDate();
+    } else if (forTodayDashboardContainerContentDate) {
+        forTodayDashboardContainerContentDate.innerHTML = getCurrentFormattedDate();
     }
 }
 
@@ -63,15 +65,6 @@ export function renderCurrentTimeDisplay() {
 
 
 }
-
-// live current date for for today dashboard
-export function forTodayDashboardRenderCurrentDateDisplay() {
-    if (forTodayDashboardContainerContentDate) {
-        forTodayDashboardContainerContentDate.innerHTML = getCurrentFormattedDate();
-    }
-}
-
-
 
 //TODO: uncomment this shit out for prod cuz dont wanna waste api tokens
 // quote display egh

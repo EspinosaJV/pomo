@@ -1,7 +1,7 @@
 import MicroModal from 'micromodal';
 import '../../css/micromodal.css';
 import { forTodayDashboardEventListeners } from '../events.js';
-import { forTodayDashboardRenderCurrentDateDisplay, renderCurrentTimeDisplay } from '../ui.js';
+import { renderCurrentDateDisplay, renderCurrentTimeDisplay } from '../ui.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     forTodayDashboardEventListeners();
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         debugMode: true
     });
 
-    forTodayDashboardRenderCurrentDateDisplay();
+    renderCurrentDateDisplay();
     renderCurrentTimeDisplay();
 
 })
