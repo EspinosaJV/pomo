@@ -75,10 +75,15 @@
 
 #forTodayDashboardContainerContentDate {
     width: 100%;
+    font-size: var(--FF-S);
+    color: var(--FONT-COLOR);
+    font-family: var(--BODY-FONT);
+    margin-bottom: 0;
 }
 
-#forTodayDashboardContainerContentDate {
-    font-size: var(--FF-S);
+#forTodayDashboardContainerContentTime {
+    width: 100%;
+    font-size: var(--FF-XS);
     color: var(--FONT-COLOR);
     font-family: var(--BODY-FONT);
 }
