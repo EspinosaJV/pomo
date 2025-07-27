@@ -66,7 +66,8 @@ export function forTodayDashboardEventListeners() {
     const forTodayDashboardHomeButton = document.getElementById("forTodayDashboardHomeButton");
     const forTodayDashboardPomodoroButton = document.getElementById("forTodayDashboardPomodoroButton");
     const forTodayDashboardEndOfDayButton = document.getElementById("forTodayDashboardEndOfDayButton");
-    
+    const forTodayDashboardForTodayButton = document.getElementById("forTodayDashboardForTodayButton");
+
     let journalTextInput;
 
     forTodayDashboardHomeButton.addEventListener("click", (event) => {
@@ -79,10 +80,19 @@ export function forTodayDashboardEventListeners() {
         window.location.href = "pomodoro.html";
     })
 
-    forTodayDashboardEndOfDayButton.addEventListener("click", (event) => {
-        console.log("Going to End of Day Dashboard now!");
-        window.location.href = "endofday.html";
-    })
+    if (forTodayDashboardEndOfDayButton) {
+        forTodayDashboardEndOfDayButton.addEventListener("click", (event) => {
+            console.log("Going to End of Day Dashboard now!");
+            window.location.href = "endofday.html";
+        })
+    }
+
+    if (forTodayDashboardForTodayButton) {
+        forTodayDashboardForTodayButton.addEventListener("click", (event) => {
+            console.log("Going to For Today Dashboard now!");
+            window.location.href = "todolist.html";
+        })
+    }
 
     forTodayDashboardNewJournalBtn.addEventListener("click", (event) => {
         MicroModal.show('modal-3', {
