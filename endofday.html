@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomo</title>
+    <link rel="icon" type="image/png" href="src/assets/POMOLOGO.png" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/pages/fortoday-endofday.css" />
+</head>
+<body>
+    <header class="header">
+        <div id="forTodayDashboardHeader" class="div__row">
+            <div class="div__row">
+                <h3 id="pomoHeaderText" class="h3 nowrap uppercase bold">pomo</h3>
+                <img id="forTodayDashboardPomoLogo" class="img" src="src/assets/POMOLOGO.png" alt="Pomo Logo" width="60" height="60">
+            </div>
+            <div id="forTodayDashboardHeaderNavButtons" class="div__row">
+                <button id="forTodayDashboardHomeButton" class="button uppercase nowrap bold">home</button>
+                <button id="forTodayDashboardPomodoroButton" class="button uppercase nowrap bold">pomodoro</button>
+                <button id="forTodayDashboardForTodayButton" class="button uppercase nowrap bold">for today</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div id="forTodayDashboardContainerHeader" class="div__row">
+            <h2 id="forTodayDashboardContainerHeaderText" class="main__div__h2 uppercase nowrap bold" >end of day</h2>
+            <button id="forTodayDashboardNewJournalBtn" class="button uppercase nowrap">journal</button>
+        </div>
+        <div id="forTodayDashboardContainerContent" class="div__column">
+            <hr class="line-break">
+            <h2 id="forTodayDashboardContainerContentDate" class="uppercase nowrap">july 24, 2025</h2>
+            <p id="forTodayDashboardContainerContentTime" class="uppercase nowrap">7:18 AM</p>
+            <div id="forTodayDashboardContainerContentJournalSection">
+                <p id="forTodayDashboardContainerContentJournalSectionText" class="p"></p>
+            </div>
+        </div>
+
+        <!-- JOURNAL MICRO MODAL-->
+        <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div id="journalMicroModalContainer" class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+                    <div class="modal__header">
+                        <h2 class="modal__title uppercase bold" id="modal-3-title">
+                            Your Daily Journal
+                        </h2>
+                        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                    </div>
+                    <div id="journalMicroModalContent" class="modal__content" id="modal-3-content">
+                        <textarea id="journalTextArea" name="journal" rows="5" columns="30" placeholder="How was your day?"></textarea>
+                    </div>
+                    <div class="modal__footer">
+                        <button id="journalModalSubmitBtn" class="modal__btn modal__btn-primary">Submit</button>
+                        <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="src/js/pages/fortoday.js"></script>
+</body>
+</html>
