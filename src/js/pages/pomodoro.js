@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pomodoroSessionModalBtn = document.getElementById("pomodoroSessionModalBtn");
     const pomodoroSessionCountMicroModalSessionDisplay = document.getElementById("pomodoroSessionCountMicroModalSessionDisplay");
     const pomodoroSessionCountModalResetBtn = document.getElementById("pomodoroSessionCountModalResetBtn");
+    const pomodoroTimerAlarmSound = document.getElementById("pomodoroTimerAlarmSound");
+    pomodoroTimerAlarmSound.loop = true;
 
     let initialTimerValue = pomodoroTimerDisplay.textContent;
 
@@ -50,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const currentTime = pomodoroTimerDisplay.textContent;
                 pomodoroModalTimerInput.value = currentTime;
                 pomodoroModalTimerInput.select();
+                pomodoroTimerAlarmSound.pause();
+                pomodoroTimerAlarmSound.currentTime = 0;
             }
         });
     });
@@ -118,9 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (imgFileName === 'pausebutton.png') {
             pauseCountdown();
             pomodoroTimerPauseButton.src = 'src/assets/playbutton.png';
+            pomodoroTimerAlarmSound.pause();
+            pomodoroTimerAlarmSound.currentTime = 0;
         } else if (imgFileName === 'playbutton.png') {
             startCountdown();
             pomodoroTimerPauseButton.src = 'src/assets/pausebutton.png';
+            pomodoroTimerAlarmSound.pause();
+            pomodoroTimerAlarmSound.currentTime = 0;
         }
     };
 
@@ -129,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
         pomodoroTimerDisplay.textContent = initialTimerValue;
         setProgress(1); 
         pomodoroTimerPauseButton.src = 'src/assets/playbutton.png'; 
+        pomodoroTimerAlarmSound.pause();
+        pomodoroTimerAlarmSound.currentTime = 0;
     };
 
     window.pomodoroTimerLog = function() {
@@ -138,6 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
         pomodoroSessionCountDict[currentPomodoroSessionDictKey] = getCurrentFormattedTime();
         localStorage.setItem("pomodoros", JSON.stringify(pomodoroSessionCountDict));
         console.log("Here is the current Pomodoro Session count", pomodoroSessionCountDict);
+        pomodoroTimerAlarmSound.pause();
+        pomodoroTimerAlarmSound.currentTime = 0;
         pomodoroTimerToggleReset();
     }
 });
@@ -167,6 +179,7 @@ function startCountdown() {
             pomodoroTimerDisplay.textContent = '00:00';
             setProgress(0); 
             document.getElementById("pomodoroTimerPauseButton").src = 'src/assets/playbutton.png';
+            pomodoroTimerAlarmSound.play();
             return;
         }
 
