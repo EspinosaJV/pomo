@@ -4,7 +4,9 @@ import '../css/micromodal.css';
 export function homeDashboardEventListeners() {
     // BUTTONS 
     const pomodoroNavButton = document.getElementById("pomodoroNavButton");
-    
+    const forTodayNavButton = document.getElementById("forTodayNavButton");
+    const endOfDayNavButton = document.getElementById("endOfDayNavButton");
+
     // from home dashboard to pomodoro dashboard
     pomodoroNavButton.addEventListener("click", (event) => {
         if (pomodoroNavButton) {
@@ -12,7 +14,24 @@ export function homeDashboardEventListeners() {
             window.location.href = "pomodoro.html";
         }
     })
+    
+    // from home dashboard to for today dashboard
+    forTodayNavButton.addEventListener("click", (event) => {
+        if (forTodayNavButton) {
+            console.log("Navigating to For Today Dashboard");
+            window.location.href = "todolist.html";
+        }
+    })
+
+    // from home dashboard to end of day dashboard
+    endOfDayNavButton.addEventListener("click", (event) => {
+        if (endOfDayNavButton) {
+            console.log("Navigating to End of Day Dashboard");
+            window.location.href = "endofday.html";
+        }
+    })
 }
+
 
 export function pomodoroDashboardEventListeners() {
     // BUTTONS
