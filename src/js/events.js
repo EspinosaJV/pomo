@@ -41,6 +41,11 @@ export function pomodoroDashboardEventListeners() {
 
 export function forTodayDashboardEventListeners() {
     const forTodayDashboardNewJournalBtn = document.getElementById("forTodayDashboardNewJournalBtn");
+    const journalModalSubmitBtn = document.getElementById("journalModalSubmitBtn");
+    const journalTextArea = document.getElementById("journalTextArea");
+    const forTodayDashboardContainerContentJournalSectionText = document.getElementById("forTodayDashboardContainerContentJournalSectionText");
+
+    let journalTextInput;
 
     forTodayDashboardNewJournalBtn.addEventListener("click", (event) => {
         MicroModal.show('modal-3', {
@@ -49,4 +54,11 @@ export function forTodayDashboardEventListeners() {
             }
         });
     });
+
+    journalModalSubmitBtn.addEventListener("click", (event) => {
+        console.log("Submitting journal content!");
+        journalTextInput = journalTextArea.value;
+        forTodayDashboardContainerContentJournalSectionText.innerHTML = journalTextInput;
+
+    })
 }
