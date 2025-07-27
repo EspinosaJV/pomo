@@ -59,6 +59,6 @@ export function forTodayDashboardEventListeners() {
         console.log("Submitting journal content!");
         journalTextInput = journalTextArea.value;
         forTodayDashboardContainerContentJournalSectionText.innerHTML = journalTextInput;
-
+        MicroModal.close('modal-3');
     })
 }
