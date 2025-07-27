@@ -63,8 +63,26 @@ export function forTodayDashboardEventListeners() {
     const journalModalSubmitBtn = document.getElementById("journalModalSubmitBtn");
     const journalTextArea = document.getElementById("journalTextArea");
     const forTodayDashboardContainerContentJournalSectionText = document.getElementById("forTodayDashboardContainerContentJournalSectionText");
-
+    const forTodayDashboardHomeButton = document.getElementById("forTodayDashboardHomeButton");
+    const forTodayDashboardPomodoroButton = document.getElementById("forTodayDashboardPomodoroButton");
+    const forTodayDashboardEndOfDayButton = document.getElementById("forTodayDashboardEndOfDayButton");
+    
     let journalTextInput;
+
+    forTodayDashboardHomeButton.addEventListener("click", (event) => {
+        console.log("Going to home dashboard now!");
+        window.location.href = "index.html";
+    })
+
+    forTodayDashboardPomodoroButton.addEventListener("click", (event) => {
+        console.log("Going to Pomodoro Dashboard now!");
+        window.location.href = "pomodoro.html";
+    })
+
+    forTodayDashboardEndOfDayButton.addEventListener("click", (event) => {
+        console.log("Going to End of Day Dashboard now!");
+        window.location.href = "endofday.html";
+    })
 
     forTodayDashboardNewJournalBtn.addEventListener("click", (event) => {
         MicroModal.show('modal-3', {
