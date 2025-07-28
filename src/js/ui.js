@@ -1,5 +1,5 @@
 import { getCurrentFormattedDate,getCurrentFormattedTime } from './utils.js';
-// import { getQuote } from './utils.js'; //TODO: uncomment this for prod cuz dont wanna waste api tokens
+import { getQuote } from './utils.js'; 
 
 const currentDateDisplay = document.getElementById("currentDateDisplay");
 const currentTimeDisplay = document.getElementById("currentTimeDisplay");
@@ -66,13 +66,11 @@ export function renderCurrentTimeDisplay() {
 
 }
 
-//TODO: uncomment this shit out for prod cuz dont wanna waste api tokens
-// quote display egh
-// export async function renderCurrentQuoteDisplay() {
-//     if ((currentQuoteDisplay) && (currentAuthorDisplay)) {
-//         const { quote,author } = await getQuote();
+export async function renderCurrentQuoteDisplay() {
+    if ((currentQuoteDisplay) && (currentAuthorDisplay)) {
+        const { quote,author } = await getQuote();
         
-//         currentQuoteDisplay.innerHTML = `"${quote}"`;
-//         currentAuthorDisplay.innerHTML = `—${author}`;
-//     }
-// }
+        currentQuoteDisplay.innerHTML = `"${quote}"`;
+        currentAuthorDisplay.innerHTML = `—${author}`;
+    }
+}

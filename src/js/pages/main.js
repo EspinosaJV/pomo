@@ -1,4 +1,4 @@
-import { renderCurrentDateDisplay,renderCurrentTimeDisplay } from '../ui.js';
+import { renderCurrentDateDisplay,renderCurrentTimeDisplay,renderCurrentQuoteDisplay } from '../ui.js';
 import { homeDashboardEventListeners } from '../events.js';
 
 document.addEventListener("DOMContentLoaded", () => {    
@@ -6,5 +6,5 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCurrentDateDisplay();
     renderCurrentTimeDisplay();
     homeDashboardEventListeners();
-    // renderCurrentQuoteDisplay(); //TODO: uncomment this shit in prod
+    renderCurrentQuoteDisplay(); //TODO: uncomment this shit in prod
 })
